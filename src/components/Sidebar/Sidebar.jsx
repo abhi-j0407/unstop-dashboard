@@ -1,13 +1,7 @@
-"use client";
-
-import { useState } from "react";
 import PropTypes from "prop-types";
-
-useState;
+import './Sidebar.css'
 
 const Sidebar = ({ user }) => {
-  //#0073E6
-
   const links = [
     {
       src: "dashboard.svg",
