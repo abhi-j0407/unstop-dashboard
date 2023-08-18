@@ -58,9 +58,10 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 16px 20px 20px 30px;
 
   .sections {
-    
+  
     .link {
       width: 100%;
+      max-width: 120px;
       aspect-ratio: 9/7;
       padding: 10px;
       margin: auto;
@@ -70,6 +71,7 @@ p, h1, h2, h3, h4, h5, h6 {
       align-items: center;
       gap: 6px;
       font-size: 12px;
+      cursor: pointer;
 
       > p {
         max-width: 75px;
@@ -95,6 +97,13 @@ p, h1, h2, h3, h4, h5, h6 {
         border-radius: 100px;
         margin-block: 6px;
       }
+    }
+
+    .active {
+      border: 1px solid #0073E6;
+      color: #0073E6;
+      background-color: #E5F1FC;
+      border-radius: 8px;
     }
 
     .admin-link {

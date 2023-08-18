@@ -26,9 +26,9 @@ const Sidebar = ({ user }) => {
     <aside className="sidebar">
       <div className="sections">
         {links.map((link) => (
-          <section className="link" key={link.title}>
+          <section className={`link ${(link.title === 'Assessment') && 'active'}`} key={link.title}>
             <div className="link-icon">
-              <img src={`/assets/sidebar/${link.src}`} alt={`${link.title}`} />
+              <img src={`/assets/sidebar/${link.src}`} alt={`${link.title}`} className="sidebar-icon" />
             </div>
             <p>{link.title}</p>
           </section>
