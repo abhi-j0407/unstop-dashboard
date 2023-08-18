@@ -38,7 +38,7 @@ const Sidebar = ({ user }) => {
             <p className="admin-tag">Admin</p>
             <div className="link-icon">
               <img
-                src={`/public/assets/sidebar/admin_meds.svg`}
+                src={`/assets/sidebar/admin_meds.svg`}
                 alt="Round Status"
               />
             </div>
