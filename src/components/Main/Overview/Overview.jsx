@@ -12,7 +12,7 @@ const Overview = ({sections}) => {
             <div className="stats">
               <img
                 src={`/assets/menu/${overview.imgSrc}`}
-                alt=""
+                alt={overview.title}
                 className={`icon ${overview.imgClass && overview.imgClass}`}
               />
               {overview.stats.map((stat, index) => (
