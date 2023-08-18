@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import './Main.css'
 import Overview from "./Overview/Overview";
 import Assessments from "./Assessments/Assessments";
@@ -66,7 +66,8 @@ const sections = [
 ];
 
 const Main = () => {
-  const [activeTab, setActiveTab] = useState("My Assessments");
+  // const [activeTab, setActiveTab] = useState("My Assessments");
+  const activeTab = "My Assessments";
   return (
     <div className="main">
       <div className="main-container">

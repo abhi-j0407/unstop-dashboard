@@ -70,7 +70,7 @@ const Assessments = () => {
                     <p>Share</p>
                   </a>
                   <div className="participants">
-                    {assessments.participants.map((participant, index) => (
+                    {assessment.participants.map((participant, index) => (
                       <div className="participant" key={index}>
                         {participant.photo ? (
                           <img src={participant.photo} alt="" />
