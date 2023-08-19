@@ -13,6 +13,14 @@ const assessments = [
         name: "Lokesh Pal",
         photo: "",
       },
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      },
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      },
     ],
   },
   {
@@ -50,6 +58,9 @@ const Assessments = () => {
             <div className="assessment-icon">
               <img src="/assets/menu/briefcase.svg" alt={assessment.title} />
             </div>
+            <div className="options-icon">
+              <img src="/assets/menu/3 dot.svg" alt="" />
+            </div>
             <div className="assessment-main">
               <h4>{assessment.title}</h4>
               <div className="info">
@@ -72,10 +83,7 @@ const Assessments = () => {
                 </div>
                 <div className="share-links">
                   <a href="#" className="link">
-                    <img
-                      src="/assets/menu/link.svg"
-                      alt="share_icon"
-                    />
+                    <img src="/assets/menu/link.svg" alt="share_icon" />
                     <p>Share</p>
                   </a>
                   <div className="participants">
