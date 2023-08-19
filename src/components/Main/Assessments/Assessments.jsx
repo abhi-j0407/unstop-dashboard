@@ -12,28 +12,29 @@ const assessments = [
       {
         name: "Lokesh Pal",
         photo: "",
-      },
-      {
-        name: "Lokesh Pal",
-        photo: "",
-      },
-      {
-        name: "Lokesh Pal",
-        photo: "",
-      },
+      }
     ],
   },
   {
     img: "",
-    title: "",
-    purpose: "",
-    date: "",
-    duration: "",
-    questions: "",
+    title: "Math Assessment",
+    purpose: "Job",
+    date: "20 Apr 2023",
+    duration: "00",
+    questions: "00",
     participants: [
       {
-        name: "",
+        name: "Lokesh Pal",
+        photo: "",
       },
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      },
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      }
     ],
   },
 ];
@@ -87,15 +88,22 @@ const Assessments = () => {
                     <p>Share</p>
                   </a>
                   <div className="participants">
-                    {assessment.participants.map((participant, index) => (
-                      <div className="participant" key={index}>
-                        {participant.photo ? (
-                          <img src={participant.photo} alt="" />
-                        ) : (
-                          <p className="profile">LP</p>
-                        )}
-                      </div>
-                    ))}
+                    {assessment.participants
+                      .slice(0, 3)
+                      .map((participant, index) => (
+                        <div className="participant" key={index}>
+                          {participant.photo ? (
+                            <img src={participant.photo} alt="" />
+                          ) : (
+                            <p className="profile">LP</p>
+                          )}
+                        </div>
+                      ))}
+                    {assessment.participants.length > 3 && (
+                      <p className="extra-count">
+                        +{assessment.participants.length - 3}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>

@@ -59,7 +59,7 @@ const sections = [
     imgClass: "link",
     stats: [
       {
-        number: "34",
+        number: "11",
       },
     ],
   },

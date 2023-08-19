@@ -177,6 +177,7 @@
 
             .participants {
               display: flex;
+
               .participant {
                 > p{
                   background-color: #6548EE;
@@ -200,6 +201,14 @@
                 background-color: #E9407A;
                 margin-left: -16px;
                 z-index: 2;
+              }
+
+              .extra-count {
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+                margin-block: auto;
+                margin-left: 4px;
               }
             }
           }
