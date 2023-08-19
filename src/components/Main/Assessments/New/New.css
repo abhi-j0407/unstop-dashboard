@@ -1,0 +1,25 @@
+.new-btn {
+    height: 50px;
+    width: 100px;
+}
+
+.new {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    padding-block: 80px;
+
+    .modal {
+        width: 600px;
+        height: 100%;
+        background-color: aliceblue;
+        opacity: 1;
+        z-index: 5;
+    }
+}

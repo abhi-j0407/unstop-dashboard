@@ -65,6 +65,45 @@ const sections = [
   },
 ];
 
+const assessments = [
+  {
+    img: "",
+    title: "Math Assessment",
+    purpose: "Job",
+    date: "20 Apr 2023",
+    duration: "00",
+    questions: "00",
+    participants: [
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      }
+    ],
+  },
+  {
+    img: "",
+    title: "Math Assessment",
+    purpose: "Job",
+    date: "20 Apr 2023",
+    duration: "00",
+    questions: "00",
+    participants: [
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      },
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      },
+      {
+        name: "Lokesh Pal",
+        photo: "",
+      }
+    ],
+  },
+];
+
 const Main = () => {
   // const [activeTab, setActiveTab] = useState("My Assessments");
   const activeTab = "My Assessments";
@@ -85,7 +124,7 @@ const Main = () => {
         </header>
         <div className="content">
           <Overview sections={sections} />
-          <Assessments />
+          <Assessments assessments={assessments}/>
         </div>
       </div>
     </div>

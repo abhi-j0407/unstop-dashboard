@@ -1,21 +1,22 @@
 import PropTypes from "prop-types";
 import './Sidebar.css'
 
+const links = [
+  {
+    src: "dashboard.svg",
+    title: "Dashboard",
+  },
+  {
+    src: "note_alt.svg",
+    title: "Assessment",
+  },
+  {
+    src: "quiz.svg",
+    title: "My Library",
+  },
+];
+
 const Sidebar = ({ user }) => {
-  const links = [
-    {
-      src: "dashboard.svg",
-      title: "Dashboard",
-    },
-    {
-      src: "note_alt.svg",
-      title: "Assessment",
-    },
-    {
-      src: "quiz.svg",
-      title: "My Library",
-    },
-  ];
   return (
     <aside className="sidebar">
       <div className="sections">
