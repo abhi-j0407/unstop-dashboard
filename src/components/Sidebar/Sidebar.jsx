@@ -16,9 +16,13 @@ const links = [
   },
 ];
 
-const Sidebar = ({ user }) => {
+const Sidebar = ({ user, show, setShowMenu }) => {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${show && 'open'}`}>
+      <div className="header">
+        <h5>Menu</h5>
+        <img src="/assets/menu/cut.svg" alt="close" onClick={() => setShowMenu(false)}/>
+      </div>
       <div className="sections">
         {links.map((link) => (
           <section className={`link ${(link.title === 'Assessment') && 'active'}`} key={link.title}>
@@ -37,7 +41,7 @@ const Sidebar = ({ user }) => {
                 alt="Round Status"
               />
             </div>
-            <p>Round Status</p>
+            <p className="admin-text">Round Status</p>
           </section>
         )}
       </div>
@@ -47,6 +51,8 @@ const Sidebar = ({ user }) => {
 
 Sidebar.propTypes = {
   user: PropTypes.string,
+  show: PropTypes.bool,
+  setShowMenu: PropTypes.func
 };
 
 export default Sidebar;

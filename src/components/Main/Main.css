@@ -21,7 +21,7 @@
 
         .menu-icon {
           display: none;
-          background-color: #F2F8FE;
+          background-color: #f2f8fe;
           width: 40px;
           aspect-ratio: 1;
           justify-content: center;
@@ -48,7 +48,7 @@
           display: flex;
           align-items: center;
           cursor: pointer;
-          color: #3E6493;
+          color: #3e6493;
 
           &.active {
             color: #0073e6;
@@ -110,23 +110,22 @@
           height: 50px;
           margin-inline: 0px;
           gap: 0px;
-  
+
           .tab {
             height: 100%;
             width: 50%;
             display: grid;
             place-items: center;
             cursor: pointer;
-            }
           }
         }
+      }
 
-        .content {
-          padding: 20px 15px;
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
+      .content {
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }

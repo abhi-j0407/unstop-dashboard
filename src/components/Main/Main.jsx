@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import './Main.css'
+import PropTypes from "prop-types";
+import "./Main.css";
 import Overview from "./Overview/Overview";
 import Assessments from "./Assessments/Assessments";
 
@@ -76,7 +77,7 @@ const assessmentsStatic = [
       {
         name: "Lokesh Pal",
         photo: "",
-      }
+      },
     ],
   },
   {
@@ -97,32 +98,38 @@ const assessmentsStatic = [
       {
         name: "Lokesh Pal",
         photo: "",
-      }
+      },
     ],
   },
 ];
 
-const Main = () => {
+const Main = ({ setShowMenu }) => {
   // const [activeTab, setActiveTab] = useState("My Assessments");
   const [assessments, setAssessments] = useState([]);
-  const [show, setShow] = useState(false);
+  const [showOverview, setShowOverview] = useState(false);
   const activeTab = "My Assessments";
 
   useEffect(() => {
-    if (assessments.length > 0) localStorage.setItem('assessments', JSON.stringify(assessments));
-    else localStorage.setItem('assessments', JSON.stringify(assessmentsStatic));
-  }, [assessments])
-  
+    if (assessments.length > 0)
+      localStorage.setItem("assessments", JSON.stringify(assessments));
+    else localStorage.setItem("assessments", JSON.stringify(assessmentsStatic));
+  }, [assessments]);
+
   useEffect(() => {
-    setAssessments(JSON.parse(localStorage.getItem('assessments')));
-  }, [])
-  
+    setAssessments(JSON.parse(localStorage.getItem("assessments")));
+  }, []);
+
   return (
     <div className="main">
       <div className="main-container">
         <header className="header">
           <div className="title">
-            <div className="menu-icon"><img src="/assets/menu/segment.svg" alt="" /></div>
+            <div
+              className="menu-icon"
+              onClick={() => setShowMenu((prev) => !prev)}
+            >
+              <img src="/assets/menu/segment.svg" alt="" />
+            </div>
             <h3 className="title-text">Assessment</h3>
           </div>
           <div className="tabs">
@@ -134,12 +141,20 @@ const Main = () => {
           </div>
         </header>
         <div className="content">
-          <Overview sections={sections} show={show} />
-          <Assessments assessments={assessments} setAssessments={setAssessments} setShow={setShow} />
+          <Overview sections={sections} show={showOverview} />
+          <Assessments
+            assessments={assessments}
+            setAssessments={setAssessments}
+            setShow={setShowOverview}
+          />
         </div>
       </div>
     </div>
   );
+};
+
+Main.propTypes = {
+  setShowMenu: PropTypes.func,
 };
 
 export default Main;
