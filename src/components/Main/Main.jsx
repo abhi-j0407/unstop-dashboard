@@ -121,6 +121,7 @@ const Main = () => {
       <div className="main-container">
         <header className="header">
           <div className="title">
+            <div className="menu-icon"><img src="/assets/menu/segment.svg" alt="" /></div>
             <h3 className="title-text">Assessment</h3>
           </div>
           <div className="tabs">
