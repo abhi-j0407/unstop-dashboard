@@ -92,6 +92,8 @@
 
 @media (max-width: 768px) {
   .overview {
+    display: none;
+
     > h3 {
       display: none;
     }
@@ -176,6 +178,10 @@
         grid-row-start: 1;
         grid-column-start: 2;
       }
+    }
+
+    &.show {
+      display: block;
     }
   }
 }

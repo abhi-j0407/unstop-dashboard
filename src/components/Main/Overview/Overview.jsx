@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import './Overview.css'
 
-const Overview = ({sections}) => {
+const Overview = ({sections, show}) => {
   return (
-    <section className="overview">
+    <section className={`overview ${show && 'show'}`}>
       <h3>Assessments Overview</h3>
       <div className="overview-container">
         {sections.map((overview) => (
@@ -33,7 +33,8 @@ const Overview = ({sections}) => {
 };
 
 Overview.propTypes = {
-    sections: PropTypes.array,
+  sections: PropTypes.array,
+  show: PropTypes.bool
   };
 
 export default Overview;

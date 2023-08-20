@@ -105,6 +105,7 @@ const assessmentsStatic = [
 const Main = () => {
   // const [activeTab, setActiveTab] = useState("My Assessments");
   const [assessments, setAssessments] = useState([]);
+  const [show, setShow] = useState(false);
   const activeTab = "My Assessments";
 
   useEffect(() => {
@@ -133,8 +134,8 @@ const Main = () => {
           </div>
         </header>
         <div className="content">
-          <Overview sections={sections} />
-          <Assessments assessments={assessments} setAssessments={setAssessments} />
+          <Overview sections={sections} show={show} />
+          <Assessments assessments={assessments} setAssessments={setAssessments} setShow={setShow} />
         </div>
       </div>
     </div>

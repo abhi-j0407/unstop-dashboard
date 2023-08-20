@@ -27,7 +27,6 @@ const New = ({ closeModal, visible, setAssessments }) => {
       ],
     };
     setAssessments((prev) => [...prev, newAssessment]);
-    alert("added");
     closeModal();
   };
 
