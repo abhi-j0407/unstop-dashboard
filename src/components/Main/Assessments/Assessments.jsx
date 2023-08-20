@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import New from "./New/New";
 import { useState } from "react";
 
-const Assessments = ({ assessments }) => {
+const Assessments = ({ assessments, setAssessments }) => {
   const [visible, setVisible] = useState(false);
   const openModal = () => {
     setVisible(true);
@@ -26,7 +26,7 @@ const Assessments = ({ assessments }) => {
             From here you can add questions of multiple types like MCQs,
             subjective (text or paragraph)!
           </p>
-          {visible && <New closeModal={closeModal} />}
+          {visible && <New closeModal={closeModal} setAssessments={setAssessments} />}
         </div>
         {assessments.map((assessment, index) => (
           <Assessment assessment={assessment} key={index} />
@@ -38,6 +38,7 @@ const Assessments = ({ assessments }) => {
 
 Assessments.propTypes = {
   assessments: PropTypes.array,
+  setAssessments: PropTypes.func
 };
 
 export default Assessments;

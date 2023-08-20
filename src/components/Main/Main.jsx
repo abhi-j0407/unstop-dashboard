@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 import './Main.css'
 import Overview from "./Overview/Overview";
 import Assessments from "./Assessments/Assessments";
@@ -65,9 +65,8 @@ const sections = [
   },
 ];
 
-const assessments = [
+const assessmentsStatic = [
   {
-    img: "",
     title: "Math Assessment",
     purpose: "Job",
     date: "20 Apr 2023",
@@ -81,7 +80,6 @@ const assessments = [
     ],
   },
   {
-    img: "",
     title: "Math Assessment",
     purpose: "Job",
     date: "20 Apr 2023",
@@ -106,7 +104,18 @@ const assessments = [
 
 const Main = () => {
   // const [activeTab, setActiveTab] = useState("My Assessments");
+  const [assessments, setAssessments] = useState([]);
   const activeTab = "My Assessments";
+
+  useEffect(() => {
+    if (assessments.length > 0) localStorage.setItem('assessments', JSON.stringify(assessments));
+    else localStorage.setItem('assessments', JSON.stringify(assessmentsStatic));
+  }, [assessments])
+  
+  useEffect(() => {
+    setAssessments(JSON.parse(localStorage.getItem('assessments')));
+  }, [])
+  
   return (
     <div className="main">
       <div className="main-container">
@@ -124,7 +133,7 @@ const Main = () => {
         </header>
         <div className="content">
           <Overview sections={sections} />
-          <Assessments assessments={assessments}/>
+          <Assessments assessments={assessments} setAssessments={setAssessments} />
         </div>
       </div>
     </div>

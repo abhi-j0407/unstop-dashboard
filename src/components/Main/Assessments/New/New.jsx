@@ -3,17 +3,32 @@ import "./New.css";
 import PropTypes from "prop-types";
 import TagInput from "./TagInput/TagInput";
 
-const New = ({ closeModal }) => {
+const New = ({ closeModal, setAssessments }) => {
   const [name, setName] = useState("");
   const [purpose, setPurpose] = useState("");
   const [desc, setDesc] = useState("");
-  const [skills, setSkills] = useState([]);
+  // const [skills, setSkills] = useState([]);
   const [duration, setDuration] = useState("");
-  const [questions, setQuestions] = useState(0);
+  // const [questions, setQuestions] = useState(0);
 
   const handleAdd = (e) => {
     e.preventDefault();
+    const newAssessment = {
+      title: name || "New Assessment",
+      purpose: purpose || "Job",
+      date: "20 Apr 2023",
+      duration: duration || "00",
+      questions: "00",
+      participants: [
+        {
+          name: "Lokesh Pal",
+          photo: "",
+        }
+      ],
+    };
+    setAssessments((prev) => [...prev, newAssessment]);
     alert("added");
+    closeModal();
   };
 
   const handleModalClick = (event) => {
@@ -92,6 +107,7 @@ const New = ({ closeModal }) => {
 
 New.propTypes = {
   closeModal: PropTypes.func,
+  setAssessments: PropTypes.func
 };
 
 export default New;
