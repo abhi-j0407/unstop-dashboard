@@ -26,7 +26,7 @@ const Assessments = ({ assessments, setAssessments }) => {
             From here you can add questions of multiple types like MCQs,
             subjective (text or paragraph)!
           </p>
-          {visible && <New closeModal={closeModal} setAssessments={setAssessments} />}
+          <New closeModal={closeModal} visible={visible} setAssessments={setAssessments} />
         </div>
         {assessments.map((assessment, index) => (
           <Assessment assessment={assessment} key={index} />

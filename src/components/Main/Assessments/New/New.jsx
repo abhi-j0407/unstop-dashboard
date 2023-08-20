@@ -3,7 +3,7 @@ import "./New.css";
 import PropTypes from "prop-types";
 import TagInput from "./TagInput/TagInput";
 
-const New = ({ closeModal, setAssessments }) => {
+const New = ({ closeModal, visible, setAssessments }) => {
   const [name, setName] = useState("");
   const [purpose, setPurpose] = useState("");
   const [desc, setDesc] = useState("");
@@ -36,7 +36,7 @@ const New = ({ closeModal, setAssessments }) => {
   };
 
   return (
-    <div className="new" id="new" onClick={closeModal}>
+    <div className={`new ${visible && 'active'}`} id="new" onClick={closeModal}>
       <div className="modal" onClick={handleModalClick}>
         <div className="header">
           <h5>Create new assessment</h5>
@@ -107,6 +107,7 @@ const New = ({ closeModal, setAssessments }) => {
 
 New.propTypes = {
   closeModal: PropTypes.func,
+  visible: PropTypes.bool,
   setAssessments: PropTypes.func
 };
 
