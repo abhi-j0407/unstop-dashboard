@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./TagInput.css";
 
+// Input component to handle tags addition form field
 const TagInput = () => {
   const [inputValue, setInputValue] = useState("");
   const [tags, setTags] = useState([]);
@@ -9,6 +10,7 @@ const TagInput = () => {
     setInputValue(event.target.value);
   };
 
+  // Adds tag when user presses Enter
   const handleInputKeyDown = (event) => {
     if (event.key === "Enter") {
       event.preventDefault(); // Prevent form submission

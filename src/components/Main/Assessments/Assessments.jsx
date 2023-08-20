@@ -4,20 +4,22 @@ import PropTypes from "prop-types";
 import New from "./New/New";
 import { useState } from "react";
 
+// Assessments component to show existing assessments, as well as new assessment option
 const Assessments = ({ assessments, setAssessments, setShow }) => {
   const [visible, setVisible] = useState(false);
+
   const openModal = () => {
     setVisible(true);
   };
-
   const closeModal = () => {
     setVisible(false);
   };
 
+  //Click handler to show/hide Overview in mobile view
   const handleOverviewClick = () => {
-    document.getElementById('overview-btn').classList.toggle('active')
-    setShow(prev => !prev)
-  }
+    document.getElementById("overview-btn").classList.toggle("active");
+    setShow((prev) => !prev);
+  };
   return (
     <section className="assessments">
       <div className="assessments-header">
@@ -61,7 +63,7 @@ const Assessments = ({ assessments, setAssessments, setShow }) => {
 Assessments.propTypes = {
   assessments: PropTypes.array,
   setAssessments: PropTypes.func,
-  setShow: PropTypes.func
+  setShow: PropTypes.func,
 };
 
 export default Assessments;

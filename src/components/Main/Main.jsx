@@ -6,6 +6,7 @@ import Assessments from "./Assessments/Assessments";
 
 const headerTabs = ["My Assessments", "Unstop Assessments"];
 
+//Different sections under the overview tab. All follow a similar object structure to ensure reusability
 const sections = [
   {
     title: "Total Assessment",
@@ -66,6 +67,7 @@ const sections = [
   },
 ];
 
+// Example assessments, will be replaced by assessments from backend in real-world app
 const assessmentsStatic = [
   {
     title: "Math Assessment",
@@ -109,6 +111,7 @@ const Main = ({ setShowMenu }) => {
   const [showOverview, setShowOverview] = useState(false);
   const activeTab = "My Assessments";
 
+  // useEffects used to store and get the assessments from localStorage
   useEffect(() => {
     if (assessments.length > 0)
       localStorage.setItem("assessments", JSON.stringify(assessments));
@@ -124,6 +127,7 @@ const Main = ({ setShowMenu }) => {
       <div className="main-container">
         <header className="header">
           <div className="title">
+            {/* Icon to show menu on mobile devices */}
             <div
               className="menu-icon"
               onClick={() => setShowMenu((prev) => !prev)}

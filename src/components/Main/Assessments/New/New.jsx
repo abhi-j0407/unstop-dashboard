@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import TagInput from "./TagInput/TagInput";
 
 const New = ({ closeModal, visible, setAssessments }) => {
+  // States to track form fields. Only fields shown in the design are covered
   const [name, setName] = useState("");
   const [purpose, setPurpose] = useState("");
   const [desc, setDesc] = useState("");
@@ -13,6 +14,7 @@ const New = ({ closeModal, visible, setAssessments }) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
+    // New assessment object with user inputs, and default values for backup/ not mentioned in design
     const newAssessment = {
       title: name || "New Assessment",
       purpose: purpose || "Job",
