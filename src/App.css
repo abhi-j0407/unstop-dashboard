@@ -2,7 +2,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -23,20 +25,33 @@ body {
 /*
   5. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /*
   6. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   7. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -45,10 +60,8 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   display: flex;
   min-height: 100vh;
-  background-color: #F6F8FA;
-  color: #1C4980;
-  font-family: 'Inter', sans-serif;
+  background-color: #f6f8fa;
+  color: #1c4980;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
 }
-
-

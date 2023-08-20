@@ -108,7 +108,7 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
-      
+
       .link {
         width: 100%;
         max-width: 100%;
@@ -121,18 +121,18 @@
         gap: 6px;
         font-size: 14px;
         cursor: pointer;
-  
+
         > p {
           max-width: fit-content;
           text-align: center;
         }
-  
+
         .link-icon {
           width: 20px;
           min-width: 20px;
         }
       }
-  
+
       .admin-link {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -147,8 +147,6 @@
           position: absolute;
           left: 10px;
         }
-        
-        
       }
     }
   }

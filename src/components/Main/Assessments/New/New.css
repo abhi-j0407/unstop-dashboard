@@ -67,7 +67,8 @@
             font-size: 16px;
           }
 
-          > input, .dropdown {
+          > input,
+          .dropdown {
             padding: 15px;
             border-radius: 8px;
             background-color: #fff;
@@ -81,7 +82,7 @@
           }
 
           #duration::placeholder {
-            color: #8DA4BF;
+            color: #8da4bf;
           }
         }
       }
@@ -115,62 +116,63 @@
   .new {
     align-items: end;
     padding-block: 0px;
-  
+
     .modal {
       width: 100%;
       height: 70%;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-  
+
       .header {
         padding: 0px 15px;
         border-bottom: 1px solid #dadce0;
         display: flex;
         flex-direction: row;
         height: 12%;
-  
+
         > h5 {
           font-size: 14px;
         }
-  
+
         > img {
           cursor: pointer;
-          background-color: #FBEBEA;
+          background-color: #fbebea;
           border-radius: 50px;
           width: 40px;
           padding: 4px;
         }
       }
-  
+
       > form {
         height: 88%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-  
+
         .form-fields {
           padding: 16px 15px;
           flex: 1;
-  
+
           > section {
             > label {
               font-size: 12px;
             }
-  
-            > input, .dropdown {
+
+            > input,
+            .dropdown {
               height: 50px;
               font-size: 12px;
             }
           }
         }
-  
+
         .submit-btn {
           padding: 7px 16px;
           height: 60px;
           display: grid;
           place-items: center;
           box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);
-  
+
           > button {
             padding: 10px 30px;
             width: 100%;
@@ -178,7 +180,7 @@
         }
       }
     }
-  
+
     &.active > .modal {
       transform: translateY(0);
     }

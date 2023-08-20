@@ -61,7 +61,7 @@
 @media (max-width: 768px) {
   .assessments {
     gap: 10px;
-  
+
     .assessments-header {
       display: flex;
       justify-content: space-between;
@@ -70,7 +70,7 @@
         font-size: 16px;
         font-weight: 600;
       }
-  
+
       .icons {
         display: flex;
         gap: 4px;
@@ -85,16 +85,16 @@
         }
 
         .icon.active {
-          border: 1px solid #0073E6;
-          background-color: #F2F8FE;
+          border: 1px solid #0073e6;
+          background-color: #f2f8fe;
         }
       }
     }
-  
+
     .assessments-content {
       gap: 15px;
       grid-template-columns: 1fr;
-  
+
       .new-assessment {
         background-color: #f6f8fa;
         border: 1px dashed #dadce0;
@@ -109,7 +109,7 @@
         align-items: center;
         text-align: center;
         gap: 12px;
-  
+
         .add-icon {
           height: 70px;
           aspect-ratio: 1;
@@ -121,12 +121,12 @@
           border: none;
           cursor: pointer;
         }
-  
+
         > h4 {
           font-size: 18px;
           font-weight: 500;
         }
-  
+
         > p {
           font-size: 12px;
         }

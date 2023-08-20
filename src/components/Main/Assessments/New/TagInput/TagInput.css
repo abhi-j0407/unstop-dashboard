@@ -1,5 +1,4 @@
 .tag-container {
-
   .tag-disp {
     padding: 16px;
     border: 1px solid #dadce0;
@@ -11,35 +10,35 @@
     flex-wrap: wrap;
 
     .tag {
-        background-color: #DDEDFF;
-        display: flex;
-        padding: 6px 6px 6px 12px;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-        width: fit-content;
-        border-radius: 22px;
-        font-size: 12px;
+      background-color: #ddedff;
+      display: flex;
+      padding: 6px 6px 6px 12px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      width: fit-content;
+      border-radius: 22px;
+      font-size: 12px;
 
-        > button {
-            background-color: transparent;
-            border: none;
-            color: #1c4980;
-            padding: 2px;
-            cursor: pointer;
+      > button {
+        background-color: transparent;
+        border: none;
+        color: #1c4980;
+        padding: 2px;
+        cursor: pointer;
 
-            > img {
-                width: 16px;
-            }
+        > img {
+          width: 16px;
         }
+      }
     }
 
     &.empty {
-        display: none;
+      display: none;
     }
 
     &.empty + .tag-input {
-        border-radius: 8px;
+      border-radius: 8px;
     }
   }
 
