@@ -25,59 +25,65 @@ const New = ({ closeModal }) => {
       <div className="modal" onClick={handleModalClick}>
         <div className="header">
           <h5>Create new assessment</h5>
-          <div className="close-icon">
-            <img src="" alt="" />
-          </div>
+          <img src="/assets/menu/cut.svg" alt="" onClick={closeModal}/>
         </div>
         <form onSubmit={handleAdd}>
-          <section>
-            <label htmlFor="name">Name of assessment</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </section>
-          <section>
-            <label htmlFor="dropdown">Purpose of the test is</label>
-            <select
-              id="dropdown"
-              value={purpose}
-              onChange={(e) => setPurpose(e.target.value)}
-            >
-              <option value="">Select</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-          </section>
-          <section>
-            <label htmlFor="dropdown">Purpose of the test is</label>
-            <select
-              id="dropdown"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
-            >
-              <option value="">Select</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-          </section>
-          <TagInput />
-          <section>
-            <label htmlFor="duration">Duration of assessment</label>
-            <input
-              type="text"
-              id="duration"
-              value={duration}
-              onChange={(e) => setDuration(e.target.value)}
-            />
-          </section>
-          <button type="submit">Submit</button>
+          <div className="form-fields">
+            <section>
+              <label htmlFor="name">Name of assessment</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Type Here"
+              />
+            </section>
+            <section>
+              <label htmlFor="purpose">Purpose of the test is</label>
+              <select
+                id="purpose"
+                className="dropdown"
+                value={purpose}
+                onChange={(e) => setPurpose(e.target.value)}
+              >
+                <option value="">Select</option>
+                <option value="A">Job</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+            </section>
+            <section>
+              <label htmlFor="desc">Description</label>
+              <select
+                id="desc"
+                className="dropdown"
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+              >
+                <option value="">Select</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+            </section>
+            <TagInput />
+            <section>
+              <label htmlFor="duration">Duration of assessment</label>
+              <input
+                type="text"
+                id="duration"
+                value={duration}
+                onChange={(e) => setDuration(e.target.value)}
+                placeholder="HH:MM:SS"
+              />
+            </section>
+          </div>
+          <div className="submit-btn">
+            <button type="submit">Save</button>
+          </div>
         </form>
       </div>
     </div>

@@ -19,7 +19,8 @@ const TagInput = () => {
     }
   };
 
-  const handleTagRemove = (tag) => {
+  const handleTagRemove = (event, tag) => {
+    event.stopPropagation();
     const updatedTags = tags.filter((t) => t !== tag);
     setTags(updatedTags);
   };
@@ -27,22 +28,27 @@ const TagInput = () => {
   return (
     <section>
       <label htmlFor="tags">Skills</label>
-      <div>
-        {tags.map((tag, index) => (
-          <span key={index} className="tag">
-            {tag}
-            <button onClick={() => handleTagRemove(tag)}>x</button>
-          </span>
-        ))}
+      <div className="tag-container">
+        <div className={`tag-disp ${tags.length===0 && 'empty'}`}>
+          {tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+              <button type="" onClick={() => handleTagRemove(event, tag)}>
+                <img src="/assets/menu/close.svg" alt="close" />
+              </button>
+            </span>
+          ))}
+        </div>
+        <input
+          type="text"
+          name="tags"
+          className="tag-input"
+          value={inputValue}
+          onChange={handleInputChange}
+          onKeyDown={handleInputKeyDown}
+          placeholder="Add a tag..."
+        />
       </div>
-      <input
-        type="text"
-        name="tags"
-        value={inputValue}
-        onChange={handleInputChange}
-        onKeyDown={handleInputKeyDown}
-        placeholder="Add a tag..."
-      />
     </section>
   );
 };
